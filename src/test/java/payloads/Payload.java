@@ -1,10 +1,17 @@
 package payloads;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 import com.github.javafaker.Faker;
 
 import pojo.Address;
+import pojo.Cart;
+import pojo.CartProduct;
 import pojo.Geolocation;
 import pojo.Name;
 import pojo.Product;
@@ -69,4 +76,23 @@ public class Payload {
 		
 		
 	}
+	//cart 
+	public static Cart cartPayload(int userId)
+	{
+		List<CartProduct>products=new ArrayList<>();
+		int productId = random.nextInt(100);
+		int quantity = random.nextInt(10)+1;
+		CartProduct cartProduct=new CartProduct(productId,quantity);
+		products.add(cartProduct);
+		//Date date=new Date();
+        //new Date()  ----> Returns date like  Wed Feb 19 13:17:45 IST 202
+        // We need to convert this to "yyyy-MM-dd" format in String 
+        
+         SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);// Define output date format
+         String date = outputFormat.format(new Date());//Converting to String
+	
+        return new Cart(userId, date, products);
+
+	}
+	
 }

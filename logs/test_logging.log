@@ -1,49 +1,49 @@
-Request method:	DELETE
-Request URI:	https://fakestoreapi.com/users/1
+Request method:	PUT
+Request URI:	https://fakestoreapi.com/carts/1
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	id=1
 Headers:		Accept=*/*
+				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
+Body:
+{
+    "userId": 1,
+    "date": "2026-09-21",
+    "products": [
+        {
+            "productId": 81,
+            "quantity": 2
+        }
+    ]
+}
 HTTP/1.1 200 OK
-Date: Fri, 18 Sep 2026 17:45:46 GMT
+Date: Mon, 21 Sep 2026 06:29:16 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
 access-control-allow-origin: *
-etag: W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"
+etag: W/"52-x4P1hP2IjzMgGCdrexgefkUSndQ"
 x-powered-by: Express
 cf-cache-status: DYNAMIC
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=VmAvtI9SmBT7xJFcE83MKX2gEnOs2ehoevhx3DxPOirMXLXzipCr3F9edJ83sbbkAl7sNkuP8gbx%2Be2hCcznPDoLI0S4%2BneBKSob9xTIb%2Bu4bUSLpuyYJtMR61gAY2ckKzM6"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=3ZkfK9aZ%2B%2BLLYNvMKETFJb8ovOwSusg%2B3Y79VSzBqWvXgKWmFv9fCt%2F6%2FQGNWnZKPPaWFBoBpBjfEWXyeooPqriiD%2Bh1Ye27%2BtMrgn%2FH%2FU7sL13JvpQdUe%2B%2FxRPDpMO29ryl"}]}
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
 Content-Encoding: gzip
 Server: cloudflare
-CF-RAY: a3d22a8f6e5a57a7-SIN
+CF-RAY: a3e703bb7d63ed99-SIN
 alt-svc: h3=":443"; ma=86400
 
 {
-    "address": {
-        "geolocation": {
-            "lat": "-37.3159",
-            "long": "81.1496"
-        },
-        "city": "kilcoole",
-        "street": "new road",
-        "number": 7682,
-        "zipcode": "12926-3874"
-    },
     "id": 1,
-    "email": "john@gmail.com",
-    "username": "johnd",
-    "password": "m38rmF$",
-    "name": {
-        "firstname": "john",
-        "lastname": "doe"
-    },
-    "phone": "1-570-236-7033",
-    "__v": 0
+    "userId": 1,
+    "date": "2026-09-21",
+    "products": [
+        {
+            "productId": 81,
+            "quantity": 2
+        }
+    ]
 }
