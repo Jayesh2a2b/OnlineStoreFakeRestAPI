@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class ConfigReader {
 	private static final String CONFIG_FINAL_PATH = ".\\src\\test\\resources\\config.properties";
-	Properties prop;
+	private  Properties prop;
 
 	public  ConfigReader() {
 		prop = new Properties();
